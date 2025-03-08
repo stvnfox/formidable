@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/fonts'],
   css: ['~/assets/css/main.css'],
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+      disableLocalFallbacks: true
+    },
+  },
   vite: {
     plugins: [
       // @ts-expect-error bc types not updated
