@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/fonts": "0.10.3",
     "@nuxt/ui": "3.0.0-beta.3",
+    "@nuxtjs/kinde": "^0.1.11",
     "@tailwindcss/vite": "^4.0.12",
     "nuxt": "^3.16.0",
     "tailwindcss": "^4.0.12",

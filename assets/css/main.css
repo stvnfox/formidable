@@ -1,2 +1,8 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
+
+@layer base {
+  .font-heading {
+    font-family: "Cedarville Cursive", sans-serif;
+  }
+}
