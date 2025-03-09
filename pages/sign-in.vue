@@ -1,15 +1,17 @@
 <script setup lang="ts">
 useHead({
-  title: "Formidable",
+  title: "Sign in to Formidable",
 });
 
 definePageMeta({
-  middleware: ["auth-logged-in"],
+  layout: false,
 });
 </script>
 
 <template>
   <section>
-    <Dashboard />
+    <UContainer>
+      <AuthFlow />
+    </UContainer>
   </section>
 </template>
