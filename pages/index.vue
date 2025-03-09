@@ -4,7 +4,13 @@ useHead({
 });
 
 definePageMeta({
-  middleware: ["auth-logged-in"],
+  middleware: async () => {
+    const { $auth } = useNuxtApp();
+
+    if (!$auth.loggedIn) {
+      return navigateTo("/sign-in");
+    }
+  },
 });
 </script>
 
