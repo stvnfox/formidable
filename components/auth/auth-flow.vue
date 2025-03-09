@@ -4,8 +4,9 @@
   <section class="flex items-center justify-center h-screen">
     <UContainer class="flex flex-col gap-4 text-center">
       <h1 class="text-3xl font-bold font-heading">Formidable</h1>
-      <p class="text-sm text-neutral-500">
-        Start creating your forms in a eyeblink by signing in
+      <p class="text-sm text-neutral-500 max-w-sm mx-auto text-pretty">
+        Your form-<span class="italic">idable</span>-building adventure starts
+        with a simple sign in below
       </p>
       <div class="mx-auto w-64 flex flex-col gap-2">
         <NuxtLink

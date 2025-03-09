@@ -1,8 +1,13 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Oooh Baby", cursive;
+}
+
 @layer base {
   .font-heading {
-    font-family: "Oooh Baby", cursive;
+    font-family: var(--font-heading);
   }
 }
