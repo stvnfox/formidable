@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-03-08",
   devtools: { enabled: true },
-  modules: ["@nuxt/fonts", "@nuxt/ui", "@nuxtjs/kinde"],
+  modules: ["@nuxt/fonts", "@nuxt/ui", "@nuxtjs/kinde", "@nuxthub/core"],
   css: ["~/assets/css/main.css"],
   fonts: {
     experimental: {
@@ -12,10 +12,10 @@ export default defineNuxtConfig({
       disableLocalFallbacks: true,
     },
   },
+  hub: {
+    database: true,
+  },
   vite: {
-    plugins: [
-      // @ts-expect-error bc types not updated
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
 });
