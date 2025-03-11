@@ -1,13 +1,12 @@
 <script setup lang="ts">
 const { id } = useRoute().params;
 
-console.log(id);
-
-// const { data } = await useGetForm(id);
+const { data } = await useGetFormById(id as string);
 </script>
 
 <template>
   <div>
     <h1>Form</h1>
+    <pre>{{ data }}</pre>
   </div>
 </template>
