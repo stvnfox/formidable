@@ -21,7 +21,7 @@ const items = [
   <div class="my-8">
     <div class="flex justify-between items-center">
       <h2 class="text-3xl font-heading">Your forms</h2>
-      <UButton>Create new form</UButton>
+      <DashboardCreateFormTrigger />
     </div>
     <div
       v-if="data.length > 0"
