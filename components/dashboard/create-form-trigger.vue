@@ -25,11 +25,7 @@ const createAndGoToForm = async () => {
     return;
   }
 
-  setTimeout(() => {
-      navigateTo(`/form/${data.formId}`);
-  }, 500);
-
-  loading.value = false;
+  navigateTo(`/form/${data.formId}`);
 };
 </script>
 
