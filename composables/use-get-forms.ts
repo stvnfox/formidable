@@ -13,7 +13,6 @@ export const useGetForms = async () => {
         id: userId
     }))
 
-    // console.log(params.value)
     const { data, status } = await useFetch("/api/forms", {
         params
     })
