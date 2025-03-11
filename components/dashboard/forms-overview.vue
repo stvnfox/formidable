@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data, status } = await useGetForms();
+const { data } = await useGetForms();
 
 const items = [
   {
