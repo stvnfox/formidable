@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm"
-import { getQuery } from "h3"
+import { getQuery, eventHandler } from "h3"
 
 import { useDrizzle } from "~/server/database/utils/use-drizzle"
 import { forms } from "~/server/database/schema"
