@@ -1,20 +1,12 @@
 <script setup lang="ts">
 const { data } = await useGetForms();
 
-const items = [
-  {
-    label: "Icons",
-    // icon: "i-lucide-pen",
-  },
-  {
-    label: "Colors",
-    // icon: "i-lucide-swatch-book",
-  },
-  {
-    label: "Components",
-    // icon: "i-lucide-box",
-  },
-];
+const items = computed(() => {
+  return data.map((form) => ({
+    label: form.name ?? `Form ${form.id}`,
+    id: form.id,
+  }));
+});
 </script>
 
 <template>
@@ -29,7 +21,41 @@ const items = [
     >
       <UAccordion :items="items">
         <template #body="{ item }">
-          This is the {{ item.label }} panel.
+          <div class="flex gap-2">
+            <UButton
+              icon="i-lucide-pen"
+              label="Edit form"
+              variant="soft"
+              color="primary"
+              size="sm"
+              :to="`/form/${item.id}`"
+              :ui="{
+                leadingIcon: 'size-3',
+              }"
+            />
+            <UButton
+              icon="i-lucide-eye"
+              label="See submissions"
+              variant="soft"
+              color="info"
+              :disabled="true"
+              size="sm"
+              :ui="{
+                leadingIcon: 'size-3',
+              }"
+            />
+            <UButton
+              icon="i-lucide-trash"
+              label="Delete form"
+              variant="soft"
+              :disabled="true"
+              color="error"
+              size="sm"
+              :ui="{
+                leadingIcon: 'size-3',
+              }"
+            />
+          </div>
         </template>
       </UAccordion>
     </div>
