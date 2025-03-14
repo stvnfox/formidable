@@ -15,5 +15,6 @@ const { data } = await useGetFormById(id as string);
     />
     <h1>Form</h1>
     <pre>{{ data }}</pre>
+    <FormEditor />
   </UContainer>
 </template>
